@@ -29,7 +29,7 @@ function gotMedia(mediastream) {
     const capabilities = videoTrack.getCapabilities()
     const settings = videoTrack.getSettings();
 
-    videoTrack.applyConstraints({advanced: [{fillLightMode: "flash"}]});
+    videoTrack.applyConstraints({advanced: [{fill: "flash"}]});
     
     // Check whether pan is supported or not.
     if (capabilities.pan) {
