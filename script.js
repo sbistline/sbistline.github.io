@@ -29,6 +29,8 @@ function gotMedia(mediastream) {
     const capabilities = videoTrack.getCapabilities()
     const settings = videoTrack.getSettings();
 
+    videoTrack.applyConstraints({advanced: [{fillLightMode: "flash"}]});
+    
     // Check whether pan is supported or not.
     if (capabilities.pan) {
       // Map pan to a slider element.
